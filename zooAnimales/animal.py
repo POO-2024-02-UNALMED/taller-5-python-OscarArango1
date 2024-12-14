@@ -1,5 +1,5 @@
 
-class animal:
+class Animal:
     totalAnimales = 0
 
     def __init__(self, nombre = None, edad = 0, habitat = None, genero = None):
@@ -8,10 +8,10 @@ class animal:
         self._habitat = habitat
         self._genero = genero
         self._zona = None
-        animal.totalAnimales += 1
+        Animal.totalAnimales += 1
     
     def getTotalAnimales(self):
-        return animal.totalAnimales
+        return Animal.totalAnimales
     
     def getNombre(self):
         return self._nombre

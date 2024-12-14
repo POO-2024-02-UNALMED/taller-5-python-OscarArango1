@@ -1,6 +1,6 @@
-from .animal import animal
+from .animal import Animal
 
-class anfibio(animal):
+class Anfibio(Animal):
     listado = []
     ranas = 0
     salamandras = 0
@@ -9,7 +9,7 @@ class anfibio(animal):
         super().__init__(nombre, edad, habitat, genero)
         self._colorPiel = colorPiel
         self._venenoso = venenoso
-        anfibio.listado.append(self)
+        Anfibio.listado.append(self)
     
     def isVenenoso(self):
         return self._venenoso
@@ -26,12 +26,12 @@ class anfibio(animal):
     
     @staticmethod
     def crearRana(nombreRana, edadRana, generoRana):
-        rana = anfibio(nombreRana, edadRana, "selva", generoRana, "rojo", True)
-        anfibio.ranas += 1
+        rana = Anfibio(nombreRana, edadRana, "selva", generoRana, "rojo", True)
+        Anfibio.ranas += 1
         return rana
     
     @staticmethod
     def crearSalamandra(nombreSalamandra, edadSalamandra, generoSalamandra):
-        salamandra = anfibio(nombreSalamandra, edadSalamandra, "selva", generoSalamandra, "negro y amarillo", False)
-        anfibio.salamandras += 1
+        salamandra = Anfibio(nombreSalamandra, edadSalamandra, "selva", generoSalamandra, "negro y amarillo", False)
+        Anfibio.salamandras += 1
         return salamandra

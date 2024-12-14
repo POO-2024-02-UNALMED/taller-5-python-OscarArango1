@@ -1,6 +1,6 @@
-from .animal import animal
+from .animal import Animal
 
-class ave(animal):
+class Ave(Animal):
     listado = []
     halcones = 0
     aguilas = 0
@@ -8,7 +8,7 @@ class ave(animal):
     def __init__(self, nombre = None, edad = 0, habitat = None, genero = None, colorPlumas = None):
         super().__init__(nombre, edad, habitat, genero)
         self._colorPlumas = colorPlumas
-        ave.listado.append(self)
+        Ave.listado.append(self)
     
     def getColorPlumas(self):
         return self._colorPlumas
@@ -20,14 +20,14 @@ class ave(animal):
     
     @staticmethod
     def crearAguila(nombreAguila, edadAguila, generoAguila):
-        aguila = ave(nombreAguila, edadAguila, "montañas", generoAguila, "blanco y amarillo")
-        ave.aguilas += 1
+        aguila = Ave(nombreAguila, edadAguila, "montañas", generoAguila, "blanco y amarillo")
+        Ave.aguilas += 1
         return aguila
     
     @staticmethod
     def crearHalcon(nombreHalcon, edadHalcon, generoHalcon):
-        halcon = ave(nombreHalcon, edadHalcon, "montañas", generoHalcon, "café glorioso")
-        ave.halcones += 1
+        halcon = Ave(nombreHalcon, edadHalcon, "montañas", generoHalcon, "café glorioso")
+        Ave.halcones += 1
         return halcon
     
     def toString(self):
